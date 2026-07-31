@@ -1,0 +1,436 @@
+/*-- scss:defaults --*/
+
+// Palette — one accent, everything else warm off-white on near-black.
+// The accent is the original navy lifted until it clears contrast on the dark
+// background; #1b4965 is unreadable here.
+$accent:      #7fb0d3;
+$accent-soft: #a8cbe4;
+$ink:         #e6e4df;
+$ink-muted:   #9aa0a6;
+$rule:        #2b2f34;
+$rule-faint:  #212428;
+$paper:       #15171a;
+
+$font-family-serif: Charter, "Bitstream Charter", "Iowan Old Style",
+  "Source Serif 4", "Palatino Linotype", Palatino, Georgia, serif;
+$font-family-sans-serif: ui-sans-serif, system-ui, -apple-system,
+  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+$font-family-base: $font-family-serif;
+$headings-font-family: $font-family-serif;
+$font-size-root: 18px;
+$line-height-base: 1.65;
+
+$body-color: $ink;
+$body-bg: $paper;
+$link-color: $accent;
+$link-hover-color: $accent-soft;
+$link-decoration: none;
+
+$headings-font-weight: 600;
+$h1-font-size: 1.9rem;
+$h2-font-size: 1.28rem;
+$h3-font-size: 1.08rem;
+
+$navbar-bg: $paper;
+$navbar-fg: $ink;
+$navbar-hl: $accent;
+$footer-bg: $paper;
+$footer-fg: $ink-muted;
+
+// Bootstrap derives borders, code and table chrome from these; left at their
+// light defaults they show up as bright seams on the dark background.
+$border-color: $rule;
+$table-border-color: $rule;
+$code-bg: #1d2024;
+$code-color: $accent-soft;
+$pre-bg: #1d2024;
+
+/*-- scss:rules --*/
+
+body {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+p {
+  margin-bottom: 1.05rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+// ---- Navbar -------------------------------------------------------------
+
+.navbar {
+  border-bottom: 1px solid $rule;
+  padding-block: 0.85rem;
+}
+
+.navbar .navbar-brand {
+  font-family: $font-family-serif;
+  font-weight: 600;
+  font-size: 1.02rem;
+  letter-spacing: 0.005em;
+}
+
+.navbar .nav-link {
+  font-family: $font-family-sans-serif;
+  font-size: 0.86rem;
+  letter-spacing: 0.02em;
+  color: $ink-muted !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: $accent !important;
+}
+
+// Right-hand links. GitHub and LinkedIn ship as Bootstrap icons; ORCID has no
+// icon in the set, so Quarto renders it as text. Size the two so they read as
+// the same kind of object instead of "two icons and a word".
+.navbar-nav.ms-auto .nav-item.compact .bi {
+  font-size: 1.02rem;
+  vertical-align: -0.08em;
+}
+
+.navbar-nav.ms-auto .nav-item:not(.compact) .nav-link {
+  font-size: 0.74rem;
+  letter-spacing: 0.07em;
+}
+
+.navbar-nav.ms-auto {
+  align-items: center;
+  gap: 0.15rem;
+}
+
+// ---- Headings -----------------------------------------------------------
+
+h1.title {
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  margin-top: 2.6rem;
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid $rule;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  margin-top: 1.9rem;
+  margin-bottom: 0.5rem;
+}
+
+// ---- Home: photo + bio --------------------------------------------------
+
+.profile-header {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+// Full-frame 9:16 shot, shown uncropped — the landscape is the point, so no
+// desaturation here and no forced aspect ratio.
+.profile-photo img,
+img.profile-photo {
+  width: 340px;
+  border-radius: 3px;
+}
+
+.profile-photo {
+  flex: 0 0 340px;
+}
+
+// Pandoc wraps both the image and the caption in <p>, which inherits the
+// global 1.05rem bottom margin and prises them apart.
+.profile-photo p {
+  margin-bottom: 0;
+}
+
+// Where the photo was taken. Quiet enough that it reads as a footnote to the
+// image, not as a line of the bio.
+.photo-caption {
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  color: $ink-muted;
+  margin-top: 0.5rem;
+}
+
+.profile-text {
+  flex: 1 1 auto;
+}
+
+.profile-text > :first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 640px) {
+  .profile-header {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .profile-photo,
+  .profile-photo img,
+  img.profile-photo {
+    flex: none;
+    width: 260px;
+    max-width: 100%;
+  }
+}
+
+// ---- Contact line -------------------------------------------------------
+
+.contact-line {
+  font-family: $font-family-sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: $ink-muted;
+  margin-top: 1.4rem;
+}
+
+.contact-line a {
+  color: $accent;
+}
+
+.contact-line .sep {
+  color: #4a4f55;
+  padding-inline: 0.5rem;
+}
+
+// ---- News ---------------------------------------------------------------
+
+.news p {
+  display: grid;
+  grid-template-columns: 4.2rem 1fr;
+  gap: 0.9rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.97rem;
+}
+
+.news .date {
+  font-family: $font-family-sans-serif;
+  font-size: 0.8rem;
+  color: $ink-muted;
+  padding-top: 0.28rem;
+  font-variant-numeric: tabular-nums;
+}
+
+// ---- Papers -------------------------------------------------------------
+
+// A single entry has to hold the page on its own, so it gets a block with a
+// real edge rather than a bare heading floating in whitespace. The accent rule
+// on the left marks it as an item in a list that will grow.
+.paper {
+  max-width: 34rem;
+  margin-top: 2.2rem;
+  margin-bottom: 1.6rem;
+  padding: 1.15rem 1.35rem;
+  border: 1px solid $rule;
+  border-left: 2px solid $accent;
+  border-radius: 3px;
+}
+
+.paper h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.12rem;
+  line-height: 1.42;
+}
+
+// Coauthors sit directly under the title, tied to it by the tight margin above
+// and set apart from it by being sans-serif and quiet.
+.paper .authors {
+  font-family: $font-family-sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.01em;
+  color: $ink-muted;
+  margin-bottom: 0;
+}
+
+.paper .authors p {
+  margin-bottom: 0;
+}
+
+// Coauthor links stay in the muted colour of the line — three accent-blue
+// names would shout louder than the paper title above them. A faint underline
+// keeps them discoverable; the accent is held back for hover.
+.paper .authors a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: $rule;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+}
+
+.paper .authors a:hover {
+  color: $accent;
+  text-decoration-color: $accent;
+}
+
+.paper .status {
+  font-family: $font-family-sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $ink-muted;
+  border: 1px solid $rule;
+  border-radius: 2px;
+  padding: 0.16rem 0.45rem;
+  white-space: nowrap;
+}
+
+// Link chips: [PDF] [Slides] [Code] …
+.chips {
+  font-family: $font-family-sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  margin-top: 0.85rem;
+}
+
+.chips a {
+  display: inline-block;
+  border: 1px solid $rule;
+  border-radius: 2px;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.35rem;
+  color: $ink-muted;
+  transition: border-color 0.12s ease, color 0.12s ease;
+}
+
+.chips a:hover {
+  border-color: $accent;
+  color: $accent;
+  text-decoration: none;
+}
+
+// ---- CV page ------------------------------------------------------------
+
+// The page carries no heading, so the two links have to hold it on their own:
+// full-width rows with a real click target, not inline chips.
+.cv-links {
+  max-width: 34rem;
+  margin-top: 2.5rem;
+}
+
+.cv-links ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.cv-links li + li {
+  margin-top: 0.7rem;
+}
+
+.cv-links a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1rem 1.15rem;
+  border: 1px solid $rule;
+  border-radius: 3px;
+  color: $ink;
+  font-size: 1.02rem;
+  transition: border-color 0.14s ease, background-color 0.14s ease;
+}
+
+.cv-links a:hover {
+  border-color: $accent;
+  background-color: rgba(127, 176, 211, 0.06);
+  text-decoration: none;
+}
+
+.cv-links .meta {
+  font-family: $font-family-sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.02em;
+  color: $ink-muted;
+}
+
+// ---- Teaching -----------------------------------------------------------
+
+// Capped so the rules under each course don't stretch the full 960px with
+// nothing but whitespace after the course name.
+.course-list {
+  margin-top: 1.6rem;
+  max-width: 38rem;
+}
+
+.course-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-list li {
+  padding-block: 0.55rem;
+  border-bottom: 1px solid $rule-faint;
+}
+
+// Programme level. Borrows the bordered-chip vocabulary already used by
+// [Work in progress] on the research page, so it reads as a tag rather than
+// as more of the course title.
+// No text-transform here: "PhD" and "MSc" carry meaningful capitalisation and
+// must not be flattened to PHD / MSC.
+.course-list .level {
+  font-family: $font-family-sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  color: $ink-muted;
+  border: 1px solid $rule;
+  border-radius: 2px;
+  padding: 0.12rem 0.4rem;
+  margin-left: 0.45rem;
+  vertical-align: 0.08em;
+  white-space: nowrap;
+}
+
+// Placeholder label — sits to the right, quiet, waiting for a name.
+.course-list .instructor {
+  font-family: $font-family-sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+  color: $ink-muted;
+  margin-left: 0.5rem;
+}
+
+// ---- Tables -------------------------------------------------------------
+
+table {
+  font-size: 0.95rem;
+  margin-block: 1.2rem;
+}
+
+table th {
+  font-family: $font-family-sans-serif;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $ink-muted;
+  font-weight: 500;
+  border-bottom: 1px solid $rule !important;
+}
+
+table td {
+  border-bottom: 1px solid $rule-faint !important;
+  padding-block: 0.55rem !important;
+}
+
+// ---- Footer -------------------------------------------------------------
+
+.nav-footer {
+  border-top: 1px solid $rule;
+  margin-top: 4rem;
+  font-family: $font-family-sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.01em;
+}

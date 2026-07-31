@@ -1,0 +1,17 @@
+/_site/
+/.quarto/
+.DS_Store
+.claude/
+
+**/*.quarto_ipynb
+
+# O repositório é PÚBLICO. Só entra aqui o que vai ao ar.
+#
+# _cv/     fonte LaTeX do CV. O que se publica é o PDF já compilado em
+#          assets/Oliveira_CV.pdf — a fonte fica só na máquina.
+# _drafts/ rascunhos fora do ar (research.md, CV anterior, foto original).
+#
+# Backup das duas pastas + histórico antigo:
+# ~/Documents/site-backup-2026-07-31/
+_cv/
+_drafts/

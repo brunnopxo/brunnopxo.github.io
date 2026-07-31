@@ -1,0 +1,36 @@
+---
+pagetitle: "Brunno Pastro Xavier de Oliveira"
+description-meta: >-
+  PhD student in Economics at Insper. Monetary economics, applied
+  macroeconometrics, and finance.
+---
+
+::: {.profile-header}
+::: {.profile-photo}
+![](assets/profile.jpg){fig-alt="Brunno Pastro Xavier de Oliveira"}
+
+::: {.photo-caption}
+Monte Verde, Minas Gerais, Brazil
+:::
+:::
+
+::: {.profile-text}
+# Brunno Pastro Xavier de Oliveira {.title}
+
+I am a PhD student in Economics at **Insper Institute of Education and
+Research**, where I am advised by
+[Marco Bonomo](https://sites.google.com/site/marcoacbonomo/){target="_blank" rel="noopener"}
+and
+[Miguel Bandeira](https://sites.google.com/view/miguelbandeira/home){target="_blank" rel="noopener"}.
+
+My fields are **monetary economics**, **applied macroeconometrics**, and
+**finance**, with a particular interest in central bank communication.
+
+Before Insper, I earned a BSc in Economics from the **University of São Paulo
+(USP)**.
+
+::: {.contact-line}
+[brunnopxo@al.insper.edu.br](mailto:brunnopxo@al.insper.edu.br)
+:::
+:::
+:::

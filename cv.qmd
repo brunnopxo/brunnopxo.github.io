@@ -1,0 +1,11 @@
+---
+pagetitle: "CV — Brunno Pastro Xavier de Oliveira"
+description-meta: >-
+  Curriculum vitae and Lattes record for Brunno Pastro Xavier de Oliveira,
+  PhD student in Economics at Insper.
+---
+
+::: {.cv-links}
+- [Curriculum Vitae [Updated July 2026 · PDF]{.meta}](assets/Oliveira_CV.pdf){target="_blank"}
+- [Lattes [Brazilian academic registry · CNPq]{.meta}](https://lattes.cnpq.br/3882433498992804){target="_blank" rel="noopener"}
+:::

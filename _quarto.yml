@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - assets/Oliveira_CV.pdf
+
+website:
+  title: "Brunno Pastro Xavier de Oliveira"
+  description: >-
+    PhD student in Economics at Insper. Monetary economics, applied
+    macroeconometrics, and finance.
+  site-url: "https://brunnopxo.github.io"
+  open-graph: true
+  twitter-card: false
+
+  navbar:
+    title: "Brunno P. X. de Oliveira"
+    pinned: false
+    left:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+    right:
+      - icon: github
+        href: https://github.com/brunnopxo
+        aria-label: GitHub
+        target: _blank
+      - text: ORCID
+        href: https://orcid.org/0000-0001-9668-6243
+        aria-label: ORCID
+        target: _blank
+      - icon: linkedin
+        href: https://www.linkedin.com/in/brunnopxo/
+        aria-label: LinkedIn
+        target: _blank
+
+  page-footer:
+    center: |
+      Brunno Pastro Xavier de Oliveira · Insper Institute of Education and Research
+    border: false
+
+format:
+  html:
+    theme: [litera, styles.scss]
+    toc: false
+    anchor-sections: false
+    smooth-scroll: true
+    # link-external-newwindow é no-op no Quarto 1.10; os links externos levam
+    # target="_blank" explícito (navbar acima e cv.qmd).
+    grid:
+      body-width: 960px
+      sidebar-width: 0px
+      margin-width: 80px

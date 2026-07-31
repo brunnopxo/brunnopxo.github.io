@@ -1,0 +1,17 @@
+---
+title: "Work in progress"
+pagetitle: "Research — Brunno Pastro Xavier de Oliveira"
+description-meta: >-
+  Research on central bank communication, information leakage, and
+  high-frequency identification of monetary policy in emerging markets.
+---
+
+::: {.paper}
+### The Unintended Consequences of Private Central Bank Meetings
+
+::: {.authors}
+with [Marco Bonomo](https://sites.google.com/site/marcoacbonomo/){target="_blank" rel="noopener"},
+[Miguel Bandeira](https://sites.google.com/view/miguelbandeira/home){target="_blank" rel="noopener"}
+and [Carlos Viana de Carvalho](https://sites.google.com/site/cvianac2/carloscarvalho){target="_blank" rel="noopener"}
+:::
+:::

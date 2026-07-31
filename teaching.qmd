@@ -1,0 +1,15 @@
+---
+title: "Teaching Assistant"
+pagetitle: "Teaching Assistant — Brunno Pastro Xavier de Oliveira"
+description-meta: >-
+  Teaching assistantships in statistics, econometrics and macroeconomics at
+  Insper.
+---
+
+## Insper
+
+::: {.course-list}
+- **Statistics** [PhD]{.level} [Instructor: Rogério Santarrosa]{.instructor}
+- **Econometrics II** [PhD]{.level} [Instructor: Naércio Menezes Filho]{.instructor}
+- **Applied Econometrics for Public Policy** [MSc]{.level} [Instructor: Naércio Menezes Filho]{.instructor}
+:::
