@@ -15,18 +15,24 @@ on:
 permissions:
   contents: write
 
+# As actions são fixadas por SHA, não por tag. Uma tag como `v2` é móvel: quem
+# controla o repositório da action pode reapontá-la a qualquer momento, e o
+# código novo rodaria aqui com a permissão `contents: write` acima. O SHA é
+# imutável. Para atualizar, resolva a tag e troque o SHA à mão:
+#   gh api repos/actions/checkout/commits/v4 --jq .sha
+#   gh api repos/quarto-dev/quarto-actions/commits/v2 --jq .sha
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
 
       - name: Set up Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+        uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2
 
       - name: Render and publish
-        uses: quarto-dev/quarto-actions/publish@v2
+        uses: quarto-dev/quarto-actions/publish@8a96df13519ee81fd526f2dfca5962811136661b # v2
         with:
           target: gh-pages
         env:
