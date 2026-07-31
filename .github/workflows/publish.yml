@@ -1,11 +1,15 @@
 name: Publish site
 
-# Publicação desarmada de propósito: só roda quando disparada à mão, em
-# Actions → Publish site → Run workflow. Para voltar a publicar a cada push,
-# descomente o bloco `push:` abaixo.
+# Publica a cada push na `main`: renderiza com Quarto e empurra o resultado
+# para a branch `gh-pages`, de onde o GitHub Pages serve. Continua dando para
+# disparar à mão em Actions → Publish site → Run workflow.
+#
+# Atenção: só vai ao ar o que estiver commitado. O PDF do CV é versionado em
+# assets/, mas a fonte LaTeX (_cv/) não é — editar o .tex sem recompilar e
+# commitar o PDF deixa o site servindo a versão antiga.
 on:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
