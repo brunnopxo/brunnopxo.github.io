@@ -19,14 +19,14 @@ permissions:
 # controla o repositório da action pode reapontá-la a qualquer momento, e o
 # código novo rodaria aqui com a permissão `contents: write` acima. O SHA é
 # imutável. Para atualizar, resolva a tag e troque o SHA à mão:
-#   gh api repos/actions/checkout/commits/v4 --jq .sha
+#   gh api repos/actions/checkout/commits/v7 --jq .sha
 #   gh api repos/quarto-dev/quarto-actions/commits/v2 --jq .sha
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@8a96df13519ee81fd526f2dfca5962811136661b # v2
