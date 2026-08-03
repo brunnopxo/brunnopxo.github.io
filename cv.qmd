@@ -6,6 +6,6 @@ description-meta: >-
 ---
 
 ::: {.cv-links}
-- [Curriculum Vitae [Updated July 2026 · PDF]{.meta}](assets/Oliveira_CV.pdf){target="_blank"}
+- [Curriculum Vitae [Updated August 2026 · PDF]{.meta}](assets/Oliveira_CV.pdf){target="_blank"}
 - [Lattes [Brazilian academic registry · CNPq]{.meta}](https://lattes.cnpq.br/3882433498992804){target="_blank" rel="noopener"}
 :::
