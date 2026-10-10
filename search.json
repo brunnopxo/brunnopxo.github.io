@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Brunno Pastro Xavier de Oliveira",
-    "section": "",
-    "text": "Monte Verde, Minas Gerais, Brazil\n\n\n\nBrunno Pastro Xavier de Oliveira\nI am a PhD student in Economics at Insper Institute of Education and Research, where I am advised by Marco Bonomo and Miguel Bandeira.\nMy fields are monetary economics, applied macroeconometrics, and finance, with a particular interest in central bank communication.\nBefore Insper, I earned a BSc in Economics from the University of São Paulo (USP).\n\nbrunnopxo@al.insper.edu.br"
-  },
-  {
     "objectID": "research.html",
     "href": "research.html",
     "title": "Work in progress",
@@ -18,7 +11,7 @@
     "href": "cv.html",
     "title": "Brunno Pastro Xavier de Oliveira",
     "section": "",
-    "text": "Curriculum Vitae Updated August 2026 · PDF\nLattes Brazilian academic registry · CNPq"
+    "text": "Curriculum Vitae Updated September 2026 · PDF\nLattes Brazilian academic registry · CNPq"
   },
   {
     "objectID": "teaching.html",
@@ -33,5 +26,12 @@
     "title": "Teaching Assistant",
     "section": "",
     "text": "Statistics PhD Instructor: Rogério Santarrosa\nEconometrics II PhD Instructor: Naércio Menezes Filho\nApplied Econometrics for Public Policy MSc Instructor: Naércio Menezes Filho"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Brunno Pastro Xavier de Oliveira",
+    "section": "",
+    "text": "Monte Verde, Minas Gerais, Brazil\n\n\n\nBrunno Pastro Xavier de Oliveira\nI am a PhD student in Economics at Insper Institute of Education and Research, where I am advised by Marco Bonomo and Miguel Bandeira.\nMy fields are monetary economics, applied macroeconometrics, and finance, with a particular interest in central bank communication.\nBefore Insper, I earned a BSc in Economics from the University of São Paulo (USP).\n\nbrunnopxo@al.insper.edu.br"
   }
 ]
